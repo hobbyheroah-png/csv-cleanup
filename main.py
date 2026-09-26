@@ -19,7 +19,7 @@ st.markdown("""
 
 # Replace with your actual Stripe Payment Link later
 STRIPE_PAYMENT_URL = "https://buy.stripe.com/dRmdRa3jf7QAbC00aO6wE00"
-
+STRIPE_LIFETIME_URL = "https://buy.stripe.com/14AeVe2fb1scgWk1eS6wE01"
 st.title("🔒 CSV CleanUp")
 st.subheader("Format messy spreadsheets for marketing platforms instantly. 100% private.")
 
