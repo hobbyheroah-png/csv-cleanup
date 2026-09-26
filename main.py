@@ -130,4 +130,4 @@ if uploaded_file is not None:
                     )
                     
         except Exception as e:
-            st.error(f"Could not read this file. Please check the formatting. Error: {e}")
+                    st.error("Sorry, this spreadsheet file layout appears to be corrupted or saved incorrectly. Please check the file type, re-save it and try uploading again!"
