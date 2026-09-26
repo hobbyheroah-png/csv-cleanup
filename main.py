@@ -114,12 +114,14 @@ if uploaded_file is not None:
                 st.write(f"Your complete file has **{len(df)} rows** ready.")
                 
                 if not has_paid:
-                            st.warning("🔒 The full download is locked.")
-        col1, col2 = st.columns(2)
-        with col1:
-            st.markdown(f'<a href="{STRIPE_PAYMENT_URL}" target="_blank"><button style="padding:12px; font-weight:bold; width:100%; border-radius:6px; background-color:#0c6638; color:white; border:none; cursor:pointer;">Pay £5 (Single Clean)</button></a>', unsafe_allow_html=True)
-        with col2:
-            st.markdown(f'<a href="{STRIPE_LIFETIME_URL}" target="_blank"><button style="padding:12px; font-weight:bold; width:100%; border-radius:6px; background-color:#0284c7; color:white; border:none; cursor:pointer;">Pay £29 (Lifetime Unlimited)</button></a>', unsafe_allow_html=True)
+                st.warning("🔒 The full download is locked.")
+                col1, col2 = st.columns(2)
+                with col1:
+                st.markdown(f'<a href="{STRIPE_PAYMENT_URL}" target="_blank"><button style="padding:12px; font-weight:bold; width:100%; border-radius:6px; background-color:#0c6638; color:white; border:none; cursor:pointer;">Pay £5 (Single Clean)</button></a>', unsafe_allow_html=True)
+                with col2:
+                st.markdown(f'<a href="{STRIPE_LIFETIME_URL}" target="_blank"><button style="padding:12px; font-weight:bold; width:100%; border-radius:6px; background-color:#0284c7; color:white; border:none; cursor:pointer;">Pay £29 (Lifetime Unlimited)</button></a>', unsafe_allow_html=True)
+
+
 
                 else:
                     st.balloons()
