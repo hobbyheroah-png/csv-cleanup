@@ -38,7 +38,7 @@ def clean_selected_column(df: pd.DataFrame, col_name: str, clean_type: str) -> p
             if 'e+' in val_str.lower(): # Fix Excel scientific notation (e.g., 4.47E+11)
                 try: val_str = f"{int(float(val_str))}"
                 except: pass
-            cleaned = re.sub(r'[\s-().+]', '', val_str)
+            cleaned = re.sub(r'[\s-().+-]', '', val_str)
             if cleaned.startswith('0') and not cleaned.startswith('00'):
                 cleaned = '44' + cleaned[1:]
             elif cleaned.startswith('7') and len(cleaned) == 10:
